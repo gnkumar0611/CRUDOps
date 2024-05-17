@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "26dc68dc-77b6-4451-8caf-f834bc8581ba",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34997993"
+	},
+	"item": [
+		{
+			"name": "Save Date",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "e3d9d493-d870-4b81-aaf2-a1684a440550",
+						"disabled": true
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"date4\",\n  \"dueDate\": \"2024-03-20T12:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Dates",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/dates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convert String to date",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dates/convertDate?date=2024-04-04 12:00:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dates",
+						"convertDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2024-04-04 12:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
